@@ -36,7 +36,7 @@ main, aside, footer{
 }
 li {margin-bottom: 15px;}
 strong::after{
-    content: "- ";
+    content: " -";
 }
 aside {
     font-style: italic;
