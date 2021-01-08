@@ -35,6 +35,9 @@ main, aside, footer{
     line-height: 1.5em;
 }
 li {margin-bottom: 15px;}
+strong::after{
+    content: "- ";
+}
 aside {
     font-style: italic;
     text-align: justify;
