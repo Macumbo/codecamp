@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abilio Guilherme">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="surveyform.css">
+</head>
+<body>
+    <main>
+        <h1 id="title">Logos Academy Survey</h1>
+        <p id="description">Please, help us know how you feel!!!</p>
+        <form action="" id="survey-form">
+            <label for="name" id="name-label">Your name</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" required>
+            <label for="email" id="email-label" >Your email</label>
+            <input type="email" name="email" id="email" placeholder="John.Doe@email.com" required>
+            <label for="number" id="number-label">How many courses did you take last season</label>
+            <input type="number" name="number" id="number" min="0" max="10" placeholder="Number of courses" required>
+            <label for="dropdown" id="dropdown-find-us">How did you find us?</label>
+            <select name="dropdown" id="dropdown" required>
+                <option value disabled selected>Please let us know</option>
+                <option value="Google">Google</option>
+                <option value="fb">Facebook</option>
+                <option value="Ig">Instagram</option>
+                <option value="ld">Linkedin</option>
+                <option value="yb">Youtube</option>
+                <option value="Np">News Paper</option>
+                <option value="ot">Other </option>
+            </select>
+            <input type="text" name="find-us" id="find-us" aria-labelledby="dropdown-find-us" placeholder="If other, please, specify">
+            <p class="nobtmg">What motivated you to study with us? <br> (Select all that apply)</p>
+            <input type="checkbox" name="mot" id="mot1" value="Recomendation">
+            <label for="mot1">Recomendation</label>
+            <input type="checkbox" name="mot" id="mot2" value="Price">
+            <label for="mot2">Price</label>
+            <input type="checkbox" name="mot" id="mot3" value="Teaching quality">
+            <label for="mot3">Teaching quality</label>
+            <input type="checkbox" name="mot" id="mot4" value="Confort">
+            <label for="mot4">Confort</label>
+            <input type="checkbox" name="mot" id="mot5" value="Language">
+            <label for="mot5">Language</label>
+            <input type="checkbox" name="mot" id="mot6" value="Respect">
+            <label for="mot6">Respect</label>
+            <input type="checkbox" name="mot" id="mot7" value="Support">
+            <label for="mot7">Support</label>
+            <input type="checkbox" name="mot" id="mot8" value="Community">
+            <label for="mot8">Community</label>
+            <label for="other-mot">If you had another motivation not specified above, you can insert it bellow</label>
+            <input type="text" name="other-mot" id="other-mot">
+            <label for="courses">How many courses do you want to take with us next season</label>
+            <select name="courses" id="courses">
+                <option value disabled selected>Please let us know</option>
+                <option value="0">none</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7+">7 or more</option>
+            </select>
+            <p>For each of the following, please give us your rate</p>
+            <div class="rate">
+                <label id="activity">Activity</label>
+                <label id="good" class="lft">Good</label>
+                <label id="normal" class="lft">Normal</label>
+                <label id="bad" class="lft">Bad</label>
+                <label id="na" title="Not Aplicable" class="lft">N/A</label>
+                <p aria-labelledby="activity">Teaching</p>
+                <input type="radio" value="good" name="teach" aria-labelledby="good">
+                <input type="radio" value="normal" name="teach" aria-labelledby="normal">
+                <input type="radio" value="bad" name="teach" aria-labelledby="bad">
+                <input type="radio" value="na" name="teach" aria-labelledby="na">
+                <p aria-labelledby="activity">Homework</p>
+                <input type="radio" value="good" name="homework" aria-labelledby="good">
+                <input type="radio" value="normal" name="homework" aria-labelledby="normal">
+                <input type="radio" value="bad" name="homework" aria-labelledby="bad">
+                <input type="radio" value="na" name="homework" aria-labelledby="na">
+                <p aria-labelledby="activity">Use of Technology</p>
+                <input type="radio" value="good" name="tech" aria-labelledby="good">
+                <input type="radio" value="normal" name="tech" aria-labelledby="normal">
+                <input type="radio" value="bad" name="tech" aria-labelledby="bad">
+                <input type="radio" value="na" name="tech" aria-labelledby="na">
+                <p aria-labelledby="activity">Attetion</p>
+                <input type="radio" value="good" name="attention" aria-labelledby="good">
+                <input type="radio" value="normal" name="attention" aria-labelledby="normal">
+                <input type="radio" value="bad" name="attention" aria-labelledby="bad">
+                <input type="radio" value="na" name="attention" aria-labelledby="na">
+                <p aria-labelledby="activity">Repetition</p>
+                <input type="radio" value="good" name="repetition" aria-labelledby="good">
+                <input type="radio" value="normal" name="repetition" aria-labelledby="normal">
+                <input type="radio" value="bad" name="repetition" aria-labelledby="bad">
+                <input type="radio" value="na" name="repetition" aria-labelledby="na">
+                <p aria-labelledby="activity">Scholarship</p>
+                <input type="radio" value="good" name="scholarship" aria-labelledby="good">
+                <input type="radio" value="normal" name="scholarship" aria-labelledby="normal">
+                <input type="radio" value="bad" name="scholarship" aria-labelledby="bad">
+                <input type="radio" value="na" name="scholarship" aria-labelledby="na">
+            </div>
+            <label for="ad-info">Please provide aditional information bellow</label>
+            <textarea name="aditional-info" id="" cols="30" rows="10" placeholder="What else do you want to share with us?"></textarea>
+            <input type="submit" id="submit">
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

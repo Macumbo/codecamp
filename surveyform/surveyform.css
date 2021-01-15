@@ -1,0 +1,64 @@
+*{box-sizing: border-box;}
+body{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(152, 115, 47, 0.7),
+        rgba(43, 95, 164, 0.7)
+    ), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUbk5NBzEYAADMqAX4AWtBNxAKiCYpTLWhCA&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+}
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 40px;
+    background-color: rgba(34, 167, 228, 0.8);
+    border-radius: 4px;
+}
+h1,
+h1+p {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+}
+input+label::after{
+    content: "";
+    display: block;
+}
+label {margin-top: 10px;}
+[type="text"],
+[type="email"],
+[type="number"],
+textarea,
+select,
+[type="submit"] {
+    display:block;
+    width: 100%;
+    margin: 4px auto 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+:focus {
+    outline: none;
+    border: 1px solid rgba(180, 119, 39, 0.8);
+}
+.nobtmg {margin-bottom: 4px;}
+.rate {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 10px auto;
+}
+.rate label[id] {
+    font-weight: bold;
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+.rate .lft {text-align: end;}
+.rate input {
+    justify-self: end;
+}
+.rate * {margin: auto 0;}
