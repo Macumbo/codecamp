@@ -62,3 +62,25 @@ select,
     justify-self: end;
 }
 .rate * {margin: auto 0;}
+@media screen and (max-width: 460px) {
+    /*set up the appearance of rating scale from table/grid to list on small devices*/
+    .rate {display: block;}
+    .rate label[id] {display:none;}
+    .rate p {
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .rate input {
+        display: block;
+        margin: 5px 10px 10px;
+    }
+    .rate [value="good"]::after {content: "Good";}
+    .rate [value="normal"]::after {content: "normal";}
+    .rate [value="bad"]::after {content: "Bad";}
+    .rate [value="na"]::after {content: "Not Aplicable";}
+    .rate [value]::after {
+        display: inline-block;
+        width: 100px;
+        margin-left: 20px;
+    }
+}
