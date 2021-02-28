@@ -63,7 +63,7 @@ select,
 }
 .rate * {margin: auto 0;}
 @media screen and (max-width: 460px) {
-    /*set up the appearance of rating scale from table/grid to list on small devices*/
+    /*set up the appearance of reviewing to change from table/grid to list on small devices*/
     .rate {display: block;}
     .rate label[id] {display:none;}
     .rate p {
