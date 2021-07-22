@@ -53,19 +53,26 @@ select,
     grid-template-columns: repeat(5, auto);
     margin: 10px auto;
 }
-.rate label[id] {
+.rate label {
     font-weight: bold;
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 .rate .lft {text-align: end;}
 .rate input {
     justify-self: end;
+    margin-right: 10%;
 }
 .rate * {margin: auto 0;}
+
+#submit {
+    background-color: rgb(180, 119, 39);
+    font-weight: bolder;
+}
+
 @media screen and (max-width: 460px) {
     /*set up the appearance of reviewing to change from table/grid to list on small devices*/
     .rate {display: block;}
-    .rate label[id] {display:none;}
+    .rate label {display:none;}
     .rate p {
         font-weight: bold;
         margin-left: 10px;

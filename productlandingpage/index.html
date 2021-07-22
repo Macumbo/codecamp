@@ -1,42 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
-    <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,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">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="data:image/png;base64,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">
     <link rel="stylesheet" href="productlandingpage.css">
 </head>
+
 <body>
     <header id="header">
-        <img src="" alt="" id="header-img">
-        <nav id="nav-bar">
-            <a href="#yus" class="nav-link">About Us</a>
-            <a href="#samplesson" class="nav-link">Sample Lesson</a>
-            <a href="#cntbte" class="nav-link">Support Us</a>
-            <a href="#talk" class="nav-link">Contact Us</a>
-        </nav>
+        <div id="header1">This is a sample landing page, it's not real</div>
+        <div id="header2">
+            <img src="./img/landpage.png" alt="" id="header-img">
+            <nav id="nav-bar">
+                <a href="#yus" class="nav-link">About Us</a>
+                <a href="#samplelesson" class="nav-link">Sample Lesson</a>
+                <a href="#contribute" class="nav-link">Support Us</a>
+                <a href="#talk" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
     </header>
     <main>
         <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
             <p>Don't waste your time, lets study together</p>
-            <label for="email">Please, enter your email below</label>
-            <input type="email" name="email" id="email" placeholder="personal@email.com">
+            <label for="email">Please, enter your email below to start</label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="name@email.com">
+            <br>
             <input type="submit" id="submit">
         </form>
         <div id="yus">
             <h2>Why Us?</h2>
+            <dl>
+                <dt>
+                    Low price
+                </dt>
+                <dd>
+                    Most school with high qualities churge tons of money for education.
+                    Here you can start paying as low as zero (0), yes, it can be free for you!!!
+                </dd>
+                <dt>
+                    High teaching quality
+                </dt>
+                <dd>
+                    Our tutors have passion on teaching and are certified internationally. They can
+                    teach you the same concept in so many diferents way. Due to passion of tutoring
+                    they have, they would be honored to have extra hours with you until you get
+                    to understand the concept.
+                </dd>
+                <dt>
+                    Practical practice
+                </dt>
+                <dd>
+                    You won't be asked to think abstructively when it's not required. We have planty
+                    of exercises for each summary and all of them are related to real world situation.
+                </dd>
+            </dl>
         </div>
-        <div id="samplesson">
+        <div id="samplelesson">
             <h2>Sample Lesson</h2>
+            <iframe id="video" src="https://www.youtube.com/embed/riHviCox5y0"></iframe>
         </div>
-        <div id="cntbte">
-            <h2>Contribute With Us</h2>
+        <div id="contribute">
+            <h2>Give Us Your Support</h2>
+            <p>
+                Although most lessons are for free, we depend on contributions to mantain the website and pay,
+                or provide for, our collaborators. Therefore, your contribution is pretty much appreciated. <br>
+                You can give a one time contribution or subscribe to contribute monthly with one of the plans
+                below.
+            </p>
+            <div class="support">
+                <div class="plan">
+                    <div class="name">Bronze</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate neque sit eligendi temporibus, enim id saepe nihil error ea mollitia
+                        reprehenderit vel. Eligendi quas molestiae voluptate rerum, eum sit nesciunt!
+                    </div>
+                    <div class="price"><b>$20</b></div>
+                </div>
+                <div class="plan">
+                    <div class="name">Silver</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate neque sit eligendi temporibus, enim id saepe nihil error ea mollitia
+                        reprehenderit vel. Eligendi quas molestiae voluptate rerum, eum sit nesciunt!
+                    </div>
+                    <div class="price"><b>$60</b></div>
+                </div>
+                <div class="plan">
+                    <div class="name">Gold</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate neque sit eligendi temporibus, enim id saepe nihil error ea mollitia
+                        reprehenderit vel. Eligendi quas molestiae voluptate rerum, eum sit nesciunt!
+                    </div>
+                    <div class="price"><b>$100+</b></div>
+                </div>
+            </div>
         </div>
         <div id="talk">
             <h2>Get In Touch With Us</h2>
+            <p>Follow us on social media</p>
+            <a href="https://fb.com">
+                <figure>
+                    <img src="./img/facebook-fb-friends-social.png" alt="">
+                    <figcaption>Facebook</figcaption>
+                </figure>
+            </a>
+            <a href="https://instagram.com">
+                <figure>
+                    <img src="./img/instagram-photo-round-social.png" alt="">
+                    <figcaption>instagram</figcaption>
+                </figure>
+            </a>
+            <a href="https://youtube.com">
+                <figure>
+                    <img src="./img/youtube-icon-vote-republican-twitter-header.png" alt="">
+                    <figcaption>Youtube</figcaption>
+                </figure>
+            </a>
+            <a href="https://wa.me/244123456789">
+                <figure>
+                    <img src="./img/chat-media-whatsapp.png" alt="">
+                    <figcaption>Whatsapp</figcaption>
+                </figure>
+            </a>
         </div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </main>
+    <footer>All rights reserved &copy;Product Page</footer>
 </body>
+
 </html>
