@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABAP Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>ABAP Documentation</header>
+    <ul>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#How_to_start" class="nav-link">How to start</a></li>
+      <li><a href="#ABAP_statement" class="nav-link">ABAP statement</a></li>
+      <li><a href="#ABAP_Syntax" class="nav-link">ABAP Syntax</a></li>
+      <li><a href="#Elementar_Data_Types" class="nav-link">Elementar Data Types</a></li>
+      <li><a href="#No_Elementar_Data_Types" class="nav-link">No Elementar Data Types</a></li>
+      <li><a href="#Variables" class="nav-link">Variables</a></li>
+      <li><a href="#Declaring_a_Variable" class="nav-link">Declaring a Variable</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>ABAP stands for <b>A</b>dvanced <b>B</b>usiness <b>A</b>pplication <b>P</b>rogramming.
+        It is a programming language used to develop and customize SAP.</p>
+      <p>It was created with the intention to be used by SAP clients to customize
+        their products, but it got so sophisticated that requires some advanced
+        programming knowledge to best take advantage of it. Therefore, it has been
+        used for programmers to enhance and customize SAP for the customer.
+      </p>
+      <p>This tutorial doesn't expect that you have profound knowledge of programming
+        but assumes you understand some technical terms</p>
+    </section>
+
+    <section id="How_to_start" class="main-section">
+      <header>How to start</header>
+      <p>To program in ABAP, one can use SAP <abbr title="Guided User Interface">GUI</abbr>
+        or <abbr title="Abap Development Tool">ADT</abbr>. SAP GUI comes with the installation
+        of SAP NETWEAVER while ADT can be installed without SAP NETWEAVER installed.
+      </p>
+      <br>
+      <p>With SAP GUI, one can create its first program by following the steps bellow:</p>
+      <ol>
+        <li>Go to transaction <em>SE80</em></li>
+        <li>On the left panel choose program</li>
+        <li>Bellow it insert the name of the program, ex. <code>ZPR_HELLO_WORLD</code></li>
+        <li>Click on <kbd>enter</kbd></li>
+        <li>It would show a pop-up saying the program doesn't exist and ask if you want to create
+          it. Click on "Yes"
+        </li>
+        <li>On the new pop-up just keep clicking on "Yes" until it gets to a pop-up requesting
+          a package
+        </li>
+        <li>On package pop-up select "local object"and done, your first program is created</li>
+        <li>Double click on the program and you would be able to see the code of your report</li>
+        <li>To change between edit and visualize, use the shortcut <kbd>ctrl</kbd>+<kbd>F1</kbd> </li>
+      </ol>
+      <br>
+      <p>With SAP ADT, one can create its first program by following the steps bellow:</p>
+      <ol>
+        <li>use the shortcut <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>N</kbd></li>
+        <li>Type <code>program</code> and select <em>ABAP Program</em></li>
+        <li>On next screen fill in those values:
+          <ul>
+            <li>Package: $TMP</li>
+            <li>Name: ZPR_HELLO_WORLD</li>
+            <li>Description: My firs hello world program</li>
+          </ul>
+        </li>
+        <li>Click on <kbd>finish</kbd></li>
+        <li>Your program is created, in eclipse, you don't need to change
+          between edit and see. When you start typing, eclipse changes the
+          status from display to edit automatically
+        </li>
+      </ol>
+
+      <p>Now that we have our first program created, let's display "hello world"
+        to anyone who runs this program by following the steps bellow:
+        <ol>
+          <li>Open the program if closed. For SAP GUI, follow the steps 1 to 4
+            on how to create a program. If SAP ADT (eclipse) use the shortcut
+            <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>A</kbd>, insert the name of
+            the program e select it to open.
+          </li>
+          <li>Type the code <code> <span class="blue">write</span>
+              '<span class="value">Hello world</span>'.</code>with the dot at the end</li>
+          <li>Activate the program using the shortcut <kbd>ctrl</kbd>+<kbd>F3</kbd></li>
+          <li>Run the program by using the key <kbd>F8</kbd></li>
+        </ol>
+        Your code would look like the following:
+      </p>
+
+      <code>
+        <ol>
+          <li><span class="blue">report</span> ZPR_HELLO_WORLD.</li>
+          <li></li>
+          <li><span class="blue">write</span> '<span class="value">Hello world</span>'.</li>
+        </ol>
+      </code>
+      <p>Congrats, your first ABAP program works.</p>
+      <p><em>Note:</em> All ABAP objects created by a customer should start with the letter Z or Y</p>
+    </section>
+
+    <section id="ABAP_statement" class="main-section">
+      <header>ABAP statement</header>
+      <p>All statements in ABAP are finished by a dot (.). If you finish a code line without
+        putting a dot at the end, ABAP will raise error and fail to activate.
+      </p>
+      <p>Many statements start with a special ABAP keyword such as <code>data, write, call
+          function</code>, etc.</p>
+      <p>If you would start many lines with the same keyword, you can use colon and commas
+        to reduce the number of repetition. For example, let's assume you want to create
+        three variables first_variable, second_variable and third_variable. In ABAP you could
+        code like one of the following:
+      </p>
+
+      <code>
+        <ol>
+          <li><span class="blue">report</span> ZPR_HELLO_WORLD.</li>
+          <li></li>
+          <li><span class="blue">data</span>: gv_first_variable.</li>
+          <li><span class="blue">data</span>: gv_second_variable.</li>
+          <li><span class="blue">data</span>: gv_third_variable.</li>
+        </ol>
+      </code>
+      <p><em>OR</em></p>
+      <code>
+        <ol>
+          <li><span class="blue">report</span> ZPR_HELLO_WORLD.</li>
+          <li></li>
+          <li><span class="blue">data</span>: gv_first_variable,</li>
+          <li> gv_second_variable,</li>
+          <li> gv_third_variable.</li>
+        </ol>
+      </code>
+      <p>On first example, there were three statements starting with the keyword
+        <code>data</code> and finishing with a dot, whereas on second example, it was
+        used the word <code>data</code> only once followed by colon (:) that allows to
+        combine multiple statements in one separating them with a commas and placing a
+        single dot at the very end as can be see above.
+      </p>
+
+      <p><em>Note:</em> the two codes have exactly the same effect and result</p>
+    </section>
+
+    <section id="ABAP_Syntax" class="main-section">
+      <header>ABAP Syntax</header>
+      <p>ABAP words and statements are case insensitive, that means that the following
+        lines of code would lead to exactly same result: </p>
+
+      <code>
+        <ol style="counter-increment: item 2;">
+          <li><span class="blue">write</span>: '<span class="value">Hello</span> ', gv_full_name.</li>
+          <li><span class="blue">WRITE</span>: '<span class="value">Hello</span> ', GV_FULL_NAME.</li>
+          <li><span class="blue">Write</span>: '<span class="value">Hello</span> ', GV_Full_Name.</li>
+        </ol>
+      </code>
+
+      <p>The three lines above would write to the screen "Hello " followed by the value in
+        variable <code>full_name</code>
+      </p>
+    </section>
+
+    <section id="Elementar_Data_Types" class="main-section">
+      <header>Elementar Data Types</header>
+      <p>The table bellow shows the elementar data types available in SAP ABAP</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C</td>
+            <td>Character string, default length of 1 but can be changed</td>
+          </tr>
+          <tr>
+            <td>N</td>
+            <td>Numerical character, default length of 1 but an be changed. Accepts only numerical
+              value but cannot do math operation
+            </td>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td>Integer, accepts negative value</td>
+          </tr>
+          <tr>
+            <td>P</td>
+            <td>Packed number, length and decimals should be determined</td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td>Floating point number, length and decimals should be determined</td>
+          </tr>
+          <tr>
+            <td>DECFLOAT16, DECFLOAT32</td>
+            <td>Decimal Floating point, kind of combination of advantage from P and F, those
+              types have fixed length and decimals
+            </td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>Date, format YYYYMMDD</td>
+          </tr>
+          <tr>
+            <td>T</td>
+            <td>Time, format HHMMSS</td>
+          </tr>
+          <tr>
+            <td>X</td>
+            <td>Hexadecimal or byte sequence, </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="No_Elementar_Data_Types" class="main-section">
+      <header>No Elementar Data Types</header>
+      <p>As ABAP is created on a business environment, there are thousands or even millions
+        of available data type. Actually, any table created in database can be used to create
+        a local structure or table in an ABAP program. Nevertheless, some most used data types
+        are:
+      </p>
+      <ul>
+        <li>string: similar to C but with dynamic length</li>
+        <li>xstring: similar to X but with dynamic length</li>
+        <li>abap_bool: for boolean values, false is empty and true is letter "x" </li>
+      </ul>
+    </section>
+
+    <section id="Variables" class="main-section">
+      <header>Variables</header>
+      <p>ABAP is case insensitive, therefore, you cannot use upper/lower case to diferentiate
+        variables as already shown above.
+      </p>
+      <p>Most ABAP variables actually fall unto one of the following kinds:
+        <ul>
+          <li>Variable &rarr; Any variable that would accept any elementar data type</li>
+          <li>Structure &rarr; Variable that would accept any combination of elementar data types,
+            usually accepts 2 or more values, ie., first and last name
+          </li>
+          <li>Table &rarr; Basically two or more lines of structure combined on a single variable</li>
+          <li>Object &rarr; Contains reference to an object, such as a class</li>
+        </ul>
+      </p>
+      <p> <em>Note:</em> You must declare a variable before use it. Since SAP <abbr title="Net Weaver">NW</abbr>7.4,
+        you can declare a variable when you need to use it, that is, inline declaration.</p>
+    </section>
+
+    <section id="Declaring_a_Variable" class="main-section">
+      <header>Declaring a Variable</header>
+      <p>The convectional naming of a variable in SAP consist in the following:</p>
+      <ul>
+        <li>The first letter should say the scope of the variable, as a result, it should be <code>G</code>
+          for global variable or <code>L</code> for local variable</li>
+        <li>The second letter should say the kind of variable with the following possibilities:
+          <ul>
+            <li><code>V</code> for variable</li>
+            <li><code>S</code> for Structure</li>
+            <li><code>T</code> for Table</li>
+            <li><code>O</code> for Reference or Object or Class</li>
+          </ul>
+        </li>
+        <li>The third character should be an underscore, and then, the name of the variable</li>
+      </ul>
+      <p>An example would be <code>ls_student</code>, by analysing the first 2 letters and the name
+        of it, I would conclude that it's a structure that is accessible only within this block and may
+        be filled with data related to a student such as first name, last name, student id, etc.</p>
+      <p>Even without seeing the data declaration, I can infer what is in it and its scope.</p>
+      <br>
+      <p>To declare a variable, we use the keyword <code>data</code>, see examples bellow with comments</p>
+
+      <code>
+        <ol style="counter-increment: item 2;">
+          <li><span class="blue">data:</span> gv_variable1,</li>
+          <li> gv_variable2 <span class="blue">type</span> c,</li>
+          <li> gv_variable3 <span class="blue">type</span> c <span class="blue">length</span> <span
+              class="number">1</span>.</li>
+          <li><span class="comment">* The three variables above accepts only 1 character,</span></li>
+          <li><span class="comment">* they're equivalent</span></li>
+        </ol>
+      </code>
+
+      <p>Let's create a program with first name and birthday and display it to user.
+        See the code bellow with comments
+      </p>
+
+      <code>
+        <ol style="counter-increment: item 2;">
+          <li><span class="blue">data</span>: gv_name <span class="blue">type</span> C
+            <span class="blue">length</span> 20,</li>
+          <li> gv_birthday <span class="blue">type</span> d. "<span class="comment">It's a character-like numeric</span></li>
+          <li></li>
+          <li> gv_name = '<span class="value">John Doe</span>'.</li>
+          <li> gv_birthday = '<span class="value">19901231</span>'</li>
+          <li></li>
+          <li><span class="blue">write</span>: gv_name,</li>
+          <li> ' <span class="value">was born in </span>',</li>
+          <li> gv_birthday.</li>
+        </ol>
+      </code>
+    </section>
+  </main>
+  <footer><b>This page was created by an ABAP consultant for practice only</b></footer>
+</body>
+
+</html>
