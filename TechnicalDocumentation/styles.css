@@ -25,7 +25,7 @@ code ol {
   font-family: consolas, Courier, monospace;
   background-color: #e6eef0;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 code ol li:before {
