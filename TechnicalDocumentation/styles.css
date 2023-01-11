@@ -79,7 +79,7 @@ kbd {
   }
 
   #main-doc {
-    margin-left: min(300px, calc(30vw + 5px));
+    margin-left: min(310px, calc(30vw + 5px));
     padding-top: 5px;
   }
 
