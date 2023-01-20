@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeCamp projects</title>
+    <title>Personal Portfolio Webpage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <ul>
-        <li><a href="tributepage/">Tribute Page for Nelson Mandela</a></li>
-        <li><a href="surveyform/">survey Form for Logos Academy</a></li>
-        <li><a href="productlandingpage/">Product Landing Page</a></li>
-        <li><a href="TechnicalDocumentation/">Technical Documentation</a></li>
-    </ul>
+    <nav id="navbar">
+        <a href="#welcome-section">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="welcome-section">
+        <h1>Welcome to Abilio's Portfolio for freeCodeCamp</h1>
+    </section>
+    <section id="projects">
+        <header>Some of my projects</header>
+        <div class="project-tile">
+            <iframe src="tributepage/" frameborder="0" scrolling="no"></iframe>
+            <a href="tributepage/">Tribute Page for Nelson Mandela</a>
+        </div>
+        <div class="project-tile">
+            <iframe src="surveyform/" frameborder="0" scrolling="no"></iframe>
+            <a href="surveyform/">survey Form for Logos Academy</a>
+        </div>
+        <div class="project-tile">
+            <iframe src="productlandingpage/" frameborder="0" scrolling="no"></iframe>
+            <a href="productlandingpage/">Product Landing Page</a>
+        </div>
+        <div class="project-tile">
+            <iframe src="TechnicalDocumentation/" frameborder="0" scrolling="no"></iframe>
+            <a href="TechnicalDocumentation/">Technical Documentation</a>
+        </div>
+    </section>
+    <section id="contact">
+        <p>You can check some of my work at <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/macumbo">freeCodeCamp</a></p>
+    </section>
+    <footer>This is just for training purposes</footer>
 </body>
+
 </html>

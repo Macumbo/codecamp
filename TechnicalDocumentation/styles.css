@@ -1,5 +1,6 @@
 html {
   font-family: 'Open Sans', arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -35,6 +36,8 @@ code ol li:before {
   border-right: 1px dotted #388e8e;
   padding: 3px;
   margin-right: 10px;
+  display: inline-block;
+  min-width: 2ch;
 }
 
 code .comment {
@@ -64,6 +67,19 @@ kbd {
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
+}
+
+td, th{
+  border: 1px solid;
+}
+
+th, tr:nth-child(2n){
+  background-color: #eee;
+}
+
+table{
+  border: 2px solid;
+  border-collapse: collapse;
 }
 
 @media screen and (min-width: 500px) {
